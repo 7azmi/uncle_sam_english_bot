@@ -1,41 +1,72 @@
-# Freddy 🤖
+# Uncle Sam AI 🤖
 
-Freddy is a Telegram bot in Python, designed to be a friendly AI assistant that cheerfully responds to incoming user messages on behalf of you. It is directly connected to the user business chat (for premium Telegram users only). The implementation is straightforward and conveys the purpose of sending and receiving text messages from Telegram direct chat. The code uses the `python-telegram-bot` library for Telegram API communication and is connected to the Google Gemini API for AI magic.
+Uncle Sam AI is a Telegram bot designed to make learning a new language engaging, personalized, and interactive. It leverages AI to provide real-time conversational practice, grammar corrections, and progress tracking for users of all skill levels.
 
-## Before You Start
-You need to have a business Telegram account (Premium) to connect a bot to your chat. Follow these steps:
-1. Create your bot from [@BotFather](https://t.me/botfather) on Telegram and enable business mode from bot settings.
-2. Go to `Settings > Telegram Business > Chatbots` and integrate your bot into your chat.
+## Key Features
 
-More details about Telegram Business can be found [here](https://telegram.org/blog/telegram-business/).
+1. **User Login and Profile Creation:**
+   - Users can set up their profiles by providing their name, language of interest, and current skill level. This ensures personalized interactions.
 
+2. **Daily Conversation Prompts:**
+   - The bot generates daily prompts tailored to the user’s skill level. Beginners receive simple sentences, while advanced learners get idioms and cultural phrases to practice.
 
+3. **Grammar Correction:**
+   - Analyzes user input for grammatical errors and provides corrections along with explanations, helping users improve their language skills.
 
+4. **Progress Milestone Tracking:**
+   - Tracks user progress and celebrates milestones with encouraging messages and virtual badges.
+
+## AI Theoretical Framework
+
+### Knowledge Representation (KR)
+The bot’s behavior is guided by the following KRs:
+- **User Profile and Skill Level:**
+  - Tracks user details and adapts prompts and feedback accordingly.
+- **Daily Prompts:**
+  - Stores a library of prompts categorized by difficulty.
+- **Grammar Rules:**
+  - Maintains rules for identifying and correcting errors.
+- **Progress Tracking:**
+  - Logs user interactions and milestones.
+
+### State Space Search
+The user’s journey through the bot can be represented as a state space:
+1. **Initial State:** User has no profile.
+2. **Intermediate States:** User engages with prompts, receives corrections, and practices.
+3. **Goal State:** User achieves milestones (e.g., mastering 30 prompts).
+
+**Transitions:**
+- Actions like profile creation, responding to prompts, and achieving milestones drive state transitions.
+
+### PEAS Model
+- **Performance Measure:** Increased engagement, improved grammar, and milestone achievements.
+- **Environment:** User interactions via Telegram.
+- **Actuators:** Text-based responses, corrections, and progress updates.
+- **Sensors:** User inputs and history logs.
 
 ## Installation
+
 1. Clone the repository:
     ```sh
-    git clone https://github.com/7azmi/Freddy.git
+    git clone https://github.com/7azmi/uncle_sam_english_bot.git
     ```
 2. Install the required dependencies:
     ```sh
     pip install -r requirements.txt
     ```
-3. Add environment variables:
+3. Set up environment variables:
     ```sh
-    export BOT_TOKEN=<obtain it from @BotFather on Telegram. Do not forget to enable business mode!>
-    export GEMINI_API_KEY=<Gemini API key, you can get it for free from https://ai.google.dev>
-    export BUSINESS_CHAT_ID=<your telegram chat id>
+    export BOT_TOKEN=<Telegram Bot Token>
+    export GEMINI_API_KEY=<Gemini API Key>
     ```
-4. Personalize your AI instructions in `ai_instructions.txt`.
-5. Run the app locally:
+4. Personalize AI instructions in `ai_instructions.txt`.
+5. Run the bot locally:
     ```sh
     python app.py
     ```
-
-## Demo
-You can directly message me on Telegram and my little bot assistant will welcome you while I'm asleep :)
-[Message Freddy](https://t.me/m/BPCKMLTrYTll)
-
+   
 ## Contributing
-This project is complete as it serves its purpose. It demonstrates that bots can be integrated with Telegram business chats and interact with users.
+Contributions are welcome to enhance the bot’s features and expand its language capabilities. Feel free to submit a pull request or suggest improvements.
+
+## License
+You see it, it's yours.
